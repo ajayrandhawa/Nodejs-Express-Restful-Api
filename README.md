@@ -9,3 +9,28 @@ A comprehensive and beginner-friendly guide to creating RESTful APIs with the po
 
 3. Install express modules in folder with command 'npm i express'. you can also install nodemon 'npm i nodemon' for live changes to to run server. 
 
+### Create First Route
+
+In we create simple route for get all products using GET request. 
+
+```
+const express = require('express');
+const app = express();
+
+const products = [
+    { id: 1, name: 'Iphone 15', price : '520' },  
+    { id: 2, name: 'Samsung S21', price : '500' },  
+    { id: 3, name: 'Nokia L3', price : '370' },  
+];
+
+app.get('/api/products', (req, res) => {
+    res.send(products);
+})
+
+const port = process.env.PORT || 3000;
+
+app.listen(port, () => console.log(`Listiening on port ${port}....`))
+
+```
+
+<img src="screenshot/get-1.png" />
