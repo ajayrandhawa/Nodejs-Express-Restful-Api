@@ -48,6 +48,17 @@ app.put('/api/product/:id', (req, res) => {
     product.price = req.body.price; 
     res.send(product);
 });
+
+
+//DELETE PRODUCT
+app.delete('/api/product/:id', (req, res) => {
+    const product = products.find(c => c.id === parseInt(req.params.id));
+    if (!product) return res.status(404).send('The Product with the given ID was not found.');
+  
+    const index = products.indexOf(product);
+    products.splice(index, 1);
+    res.send(products);
+});
   
 
 // VALIDATE REQUEST 
