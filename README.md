@@ -50,10 +50,6 @@ app.get('/api/product/:id', (req, res) => {
 
 ```
 
-Output after calling '/api/product/2'
-
-<img src="screenshot/get-2.png" />
-
 ### 3. Handle POST Request to Add Product 
 
 Using POST request to add more product, I using JSON data with POST request.
@@ -88,6 +84,23 @@ function validateProduct(product) {
 
 ```
 
-Output after Calling Post request '/api/products'
+product.name = req.body.name; 
 
-<img src="screenshot/get-3.png" />
+### 2. Handle PUT Request and Update Product With ID
+
+Using JSON data to update products with specific ID
+
+```
+app.put('/api/product/:id', (req, res) => {
+    const product = products.find(c => c.id === parseInt(req.params.id));
+    if (!product) return res.status(404).send('The product with the given ID was not found.');
+  
+    const { error } = validateProduct(req.body); 
+    if (error) return res.status(400).send(error.details[0].message);
+    
+    product.name = req.body.name; 
+    product.price = req.body.price; 
+    res.send(product);
+});
+
+```

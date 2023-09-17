@@ -35,6 +35,19 @@ app.post('/api/products', (req, res) => {
     products.push(product);
     res.send(product);
 });
+
+// UPDATE PRODUCT
+app.put('/api/product/:id', (req, res) => {
+    const product = products.find(c => c.id === parseInt(req.params.id));
+    if (!product) return res.status(404).send('The product with the given ID was not found.');
+  
+    const { error } = validateProduct(req.body); 
+    if (error) return res.status(400).send(error.details[0].message);
+    
+    product.name = req.body.name; 
+    product.price = req.body.price; 
+    res.send(product);
+});
   
 
 // VALIDATE REQUEST 
