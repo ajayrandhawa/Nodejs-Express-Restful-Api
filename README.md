@@ -35,7 +35,6 @@ app.listen(port, () => console.log(`Listiening on port ${port}....`))
 
 Output after calling '/api/products'
 
-<img src="screenshot/get-1.png" />
 
 ### 2. Handle Route Params
 
