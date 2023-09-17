@@ -33,6 +33,23 @@ app.listen(port, () => console.log(`Listiening on port ${port}....`))
 
 ```
 
-Output after calling 'http://3000/api/products'
+Output after calling '/api/products'
 
 <img src="screenshot/get-1.png" />
+
+### Handle Route Params
+
+With params we can use addional paramter to request for filter and other uses.
+
+```
+app.get('/api/product/:id', (req, res) => {
+    const product = products.find(product => product.id === parseInt(req.params.id));
+    if (!product) return res.status(404).send('The Product with the given ID was not found.');
+    res.send(product);
+});
+
+```
+
+Output after calling '/api/product/2'
+
+<img src="screenshot/get-2.png" />

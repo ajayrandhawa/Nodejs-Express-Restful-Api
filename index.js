@@ -9,8 +9,14 @@ const products = [
 
 app.get('/api/products', (req, res) => {
     res.send(products);
-})
+});
 
+app.get('/api/product/:id', (req, res) => {
+    const product = products.find(product => product.id === parseInt(req.params.id));
+    if (!product) return res.status(404).send('The Product with the given ID was not found.');
+    res.send(product);
+});
+  
 
 const port = process.env.PORT || 3000;
 
