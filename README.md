@@ -33,9 +33,6 @@ app.listen(port, () => console.log(`Listiening on port ${port}....`))
 
 ```
 
-Output after calling '/api/products'
-
-
 ### 2. Handle Route Params
 
 With params we can use addional paramter to request for filter and other uses.
