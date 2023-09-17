@@ -9,7 +9,7 @@ A comprehensive and beginner-friendly guide to creating RESTful APIs with the po
 
 3. Install express modules in folder with command 'npm i express'. you can also install nodemon 'npm i nodemon' for live changes to to run server. 
 
-### Create First Route
+### 1. Create First Route
 
 In we create simple route for get all products using GET request. 
 
@@ -37,7 +37,7 @@ Output after calling '/api/products'
 
 <img src="screenshot/get-1.png" />
 
-### Handle Route Params
+### 2. Handle Route Params
 
 With params we can use addional paramter to request for filter and other uses.
 
