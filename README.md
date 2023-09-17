@@ -84,8 +84,6 @@ function validateProduct(product) {
 
 ```
 
-product.name = req.body.name; 
-
 ### 4. Handle PUT Request and Update Product With ID
 
 Using JSON data to update products with specific ID
