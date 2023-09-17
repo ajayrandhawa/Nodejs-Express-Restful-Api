@@ -33,4 +33,6 @@ app.listen(port, () => console.log(`Listiening on port ${port}....`))
 
 ```
 
+Output after calling 'http://3000/api/products'
+
 <img src="screenshot/get-1.png" />
