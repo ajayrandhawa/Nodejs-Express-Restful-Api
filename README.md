@@ -5,7 +5,7 @@ A comprehensive and beginner-friendly guide to creating RESTful APIs with the po
 
 1. Start project with 'npm init' and enter basic details about project.
 
-2. create 'index.js' file in folder.
+2. Create 'index.js' file in folder.
 
-3. install express modules in folder with command 'npm i express'. you can also install nodemon for live changes to to run server. 
+3. Install express modules in folder with command 'npm i express'. you can also install nodemon 'npm i nodemon' for live changes to to run server. 
 
