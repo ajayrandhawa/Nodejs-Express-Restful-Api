@@ -113,3 +113,5 @@ app.delete('/api/product/:id', (req, res) => {
 });
 
 ```
+
+### 5. Middleware 
