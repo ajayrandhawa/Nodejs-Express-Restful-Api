@@ -1,8 +1,11 @@
 const Joi = require('joi');
 const express = require('express');
-
+const logger = require('./logger');
 const app = express();
 app.use(express.json());
+
+app.use(logger);
+app.use(express.static('./public'))
 
 const products = [
     { id: 1, name: 'Iphone 15', price : '520' },  
